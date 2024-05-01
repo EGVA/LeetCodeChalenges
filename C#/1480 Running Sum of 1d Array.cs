@@ -1,15 +1,3 @@
-public class Solution {
-    public int[] RunningSum(int[] nums) {
-        int[] result = new int[nums.Length];
-        int lastNumberResult = 0;
-        for(int i = 0; i < nums.Length; i++){
-            result[i] = nums[i] + lastNumberResult;
-            lastNumberResult = result[i];
-        }
-        return result;
-    }
-}
-
 /*
 Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
 
@@ -36,3 +24,14 @@ Constraints:
 1 <= nums.length <= 1000
 -10^6 <= nums[i] <= 10^6
 */
+public class Solution {
+    public int[] RunningSum(int[] nums) {
+        int[] result = new int[nums.Length];
+        int lastNumberResult = 0;
+        for(int i = 0; i < nums.Length; i++){
+            result[i] = nums[i] + lastNumberResult;
+            lastNumberResult = result[i];
+        }
+        return result;
+    }
+}
